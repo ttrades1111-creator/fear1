@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Fear1 — Premium faith-inspired streetwear. Only fear God. Shop hoodies, tees, and more." />
+  <meta name="keywords" content="Fear1, Christian streetwear, faith apparel, premium hoodies, religious clothing brand" />
+  <meta property="og:title" content="Fear1 — Fear Only God" />
+  <meta property="og:description" content="Premium apparel inspired by the belief that there is only One to fear." />
+  <title>Fear1 — Fear Only God</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Bebas+Neue&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursor-trail"></div>
+
+  <!-- LOADER -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <span class="loader-logo">FEAR<span>1</span></span>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <button class="nav-menu-btn" id="menuBtn" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="#" class="nav-logo">FEAR<span>1</span></a>
+      <div class="nav-links" id="navLinks">
+        <a href="#collection">Collection</a>
+        <a href="#about">Our Story</a>
+        <a href="#values">Values</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <button class="nav-icon cart-btn" id="cartBtn" aria-label="Cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#collection" class="mobile-link">Collection</a>
+      <a href="#about" class="mobile-link">Our Story</a>
+      <a href="#values" class="mobile-link">Values</a>
+      <a href="#scripture" class="mobile-link">Scripture</a>
+      <a href="#contact" class="mobile-link">Contact</a>
+    </div>
+  </nav>
+
+  <!-- CART DRAWER -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>Your Bag</h3>
+      <button class="cart-close" id="cartClose">✕</button>
+    </div>
+    <div class="cart-body" id="cartBody">
+      <div class="cart-empty">
+        <p>Your bag is empty.</p>
+        <a href="#collection" class="btn-primary" id="cartShopBtn">Shop Now</a>
+      </div>
+    </div>
+    <div class="cart-footer" id="cartFooter" style="display:none;">
+      <div class="cart-total">
+        <span>Total</span>
+        <span id="cartTotal">$0.00</span>
+      </div>
+      <button class="btn-primary full-width">Checkout</button>
+    </div>
+  </div>
+
+  <!-- QUICK VIEW MODAL -->
+  <div class="modal-overlay" id="modalOverlay"></div>
+  <div class="modal" id="productModal">
+    <button class="modal-close" id="modalClose">✕</button>
+    <div class="modal-content" id="modalContent"></div>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-grain"></div>
+      <div class="hero-vignette"></div>
+      <div class="hero-lines"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-eyebrow reveal">Est. 2024</div>
+      <h1 class="hero-title reveal">
+        <span class="line">Fear</span>
+        <span class="line accent">One.</span>
+      </h1>
+      <p class="hero-sub reveal">Faith. Purpose. Confidence.</p>
+      <p class="hero-body reveal">Premium apparel inspired by the belief that there is only One to fear.</p>
+      <div class="hero-actions reveal">
+        <a href="#collection" class="btn-primary">Shop Collection</a>
+        <a href="#about" class="btn-ghost">Our Story</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+    <div class="hero-badge">
+      <svg viewBox="0 0 100 100" class="badge-ring">
+        <path id="circle-path" d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"/>
+        <text><textPath href="#circle-path">FEAR GOD · LIVE BOLD · FEAR ONE · STAY HUMBLE ·</textPath></text>
+      </svg>
+      <span class="badge-center">✦</span>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-wrapper">
+    <div class="marquee-track">
+      <span>FEAR ONE</span><span>✦</span>
+      <span>FAITH</span><span>✦</span>
+      <span>PURPOSE</span><span>✦</span>
+      <span>CONFIDENCE</span><span>✦</span>
+      <span>FEAR GOD</span><span>✦</span>
+      <span>LIVE BOLD</span><span>✦</span>
+      <span>STAY HUMBLE</span><span>✦</span>
+      <span>FEAR ONE</span><span>✦</span>
+      <span>FAITH</span><span>✦</span>
+      <span>PURPOSE</span><span>✦</span>
+      <span>CONFIDENCE</span><span>✦</span>
+      <span>FEAR GOD</span><span>✦</span>
+      <span>LIVE BOLD</span><span>✦</span>
+      <span>STAY HUMBLE</span><span>✦</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual">
+          <div class="about-img-wrap">
+            <div class="about-img-block">
+              <div class="about-img-inner">
+                <div class="about-pattern"></div>
+                <div class="about-text-art">
+                  <span>F</span><span>E</span><span>A</span><span>R</span>
+                  <span class="gold">1</span>
+                </div>
+              </div>
+            </div>
+            <div class="about-accent-box">
+              <p>"Only One matters."</p>
+            </div>
+          </div>
+        </div>
+        <div class="about-copy">
+          <div class="section-eyebrow reveal">Our Story</div>
+          <h2 class="section-title reveal">Born from<br/><em>Faith.</em></h2>
+          <p class="about-text reveal">The name <strong>Fear1</strong> comes from the idea of fearing only God. It represents courage, faith, discipline, and purpose in everyday life.</p>
+          <p class="about-text reveal">We believe the most fearless person in the room is the one who walks with purpose — not seeking the approval of people, but answering to a higher calling. Fear1 is for those who live by that conviction.</p>
+          <p class="about-text reveal">Every piece we make carries that spirit: premium construction, intentional design, and a message that goes deeper than fashion.</p>
+          <div class="about-stats reveal">
+            <div class="stat"><span class="stat-num">100%</span><span class="stat-label">Premium Quality</span></div>
+            <div class="stat"><span class="stat-num">1</span><span class="stat-label">To Fear</span></div>
+            <div class="stat"><span class="stat-num">∞</span><span class="stat-label">Faith</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COLLECTION -->
+  <section class="collection" id="collection">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-eyebrow">New Drop</div>
+        <h2 class="section-title">The Collection</h2>
+        <p class="section-sub">Premium pieces built to carry the message.</p>
+      </div>
+
+      <!-- FILTER -->
+      <div class="filter-bar reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="hoodie">Hoodies</button>
+        <button class="filter-btn" data-filter="tshirt">T-Shirts</button>
+        <button class="filter-btn" data-filter="sweatshirt">Sweatshirts</button>
+        <button class="filter-btn" data-filter="cap">Caps</button>
+        <button class="filter-btn" data-filter="accessory">Accessories</button>
+      </div>
+
+      <div class="products-grid" id="productsGrid">
+
+        <div class="product-card reveal" data-category="hoodie">
+          <div class="product-img-wrap">
+            <div class="product-img hoodie-1">
+              <div class="product-img-placeholder">
+                <span class="product-label">FEAR1</span>
+                <span class="product-type-tag">HOODIE</span>
+              </div>
+            </div>
+            <div class="product-overlay">
+              <button class="quick-view-btn" data-id="1">Quick View</button>
+              <button class="add-cart-btn" data-id="1">+ Add to Bag</button>
+            </div>
+            <span class="product-badge">New</span>
+          </div>
+          <div class="product-info">
+            <div class="product-name">Fear1 Core Hoodie</div>
+            <div class="product-price">$98.00</div>
+          </div>
+        </div>
+
+        <div class="product-card reveal" data-category="tshirt">
+          <div class="product-img-wrap">
+            <div class="product-img tshirt-1">
+              <div class="product-img-placeholder">
+                <span class="product-label">F1</span>
+                <span class="product-type-tag">TEE</span>
+              </div>
+            </div>
+            <div class="product-overlay">
+              <button class="quick-view-btn" data-id="2">Quick View</button>
+              <button class="add-cart-btn" data-id="2">+ Add to Bag</button>
+            </div>
+            <span class="product-badge">Best Seller</span>
+          </div>
+          <div class="product-info">
+            <div class="product-name">Fear1 Signature Tee</div>
+            <div class="product-price">$48.00</div>
+          </div>
+        </div>
+
+        <div class="product-card reveal" data-category="sweatshirt">
+          <div class="product-img-wrap">
+            <div class="product-img sweat-1">
+              <div class="product-img-placeholder">
+                <span class="product-label">FEAR</span>
+                <span class="product-type-tag">CREW</span>
+              </div>
+            </div>
+            <div class="product-overlay">
+              <button class="quick-view-btn" data-id="3">Quick View</button>
+              <button class="add-cart-btn" data-id="3">+ Add to Bag</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <div class="product-name">Proverbs Crewneck</div>
+            <div class="product-price">$78.00</div>
+          </div>
+        </div>
+
+        <div class="product-card reveal" data-category="cap">
+          <div class="product-img-wrap">
+            <div class="product-img cap-1">
+              <div class="product-img-placeholder">
+                <span class="product-label">F1</span>
+                <span class="product-type-tag">CAP</span>
+              </div>
+            </div>
+            <div class="product-overlay">
+              <button class="quick-view-btn" data-id="4">Quick View</button>
+              <button class="add-cart-btn" data-id="4">+ Add to Bag</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <div class="product-name">Fear1 Dad Cap</div>
+            <div class="product-price">$38.00</div>
+          </div>
+        </div>
+
+        <div class="product-card reveal" data-category="hoodie">
+          <div class="product-img-wrap">
+            <div class="product-img hoodie-2">
+              <div class="product-img-placeholder">
+                <span class="product-label">BOLD</span>
+                <span class="product-type-tag">HOODIE</span>
+              </div>
+            </div>
+            <div class="product-overlay">
+              <button class="quick-view-btn" data-id="5">Quick View</button>
+              <button class="add-cart-btn" data-id="5">+ Add to Bag</button>
+            </div>
+            <span class="product-badge">Limited</span>
+          </div>
+          <div class="product-info">
+            <div class="product-name">Live Bold Hoodie</div>
+            <div class="product-price">$108.00</div>
+          </div>
+        </div>
+
+        <div class="product-card reveal" data-category="accessory">
+          <div class="product-img-wrap">
+            <div class="product-img acc-1">
+              <div class="product-img-placeholder">
+                <span class="product-label">✦</span>
+                <span class="product-type-tag">ACC</span>
+              </div>
+            </div>
+            <div class="product-overlay">
+              <button class="quick-view-btn" data-id="6">Quick View</button>
+              <button class="add-cart-btn" data-id="6">+ Add to Bag</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <div class="product-name">Fear1 Gold Tote</div>
+            <div class="product-price">$42.00</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SCRIPTURE -->
+  <section class="scripture" id="scripture">
+    <div class="scripture-bg"></div>
+    <div class="container">
+      <div class="section-eyebrow reveal light">The Word</div>
+      <h2 class="section-title reveal light">Foundation</h2>
+      <div class="verses-grid">
+        <div class="verse-card reveal">
+          <div class="verse-mark">✦</div>
+          <blockquote>"The fear of the Lord is the beginning of wisdom."</blockquote>
+          <cite>— Proverbs 9:10</cite>
+        </div>
+        <div class="verse-card reveal featured">
+          <div class="verse-mark">✦</div>
+          <blockquote>"Be strong and courageous. Do not be afraid; do not be discouraged, for the Lord your God will be with you wherever you go."</blockquote>
+          <cite>— Joshua 1:9</cite>
+        </div>
+        <div class="verse-card reveal">
+          <div class="verse-mark">✦</div>
+          <blockquote>"For God has not given us a spirit of fear, but of power, love, and self-discipline."</blockquote>
+          <cite>— 2 Timothy 1:7</cite>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUES -->
+  <section class="values" id="values">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-eyebrow">What We Stand For</div>
+        <h2 class="section-title">Our Values</h2>
+      </div>
+      <div class="values-grid">
+        <div class="value-item reveal">
+          <div class="value-number">01</div>
+          <div class="value-icon">✝</div>
+          <h3>Faith</h3>
+          <p>We build everything on the foundation of belief. Our faith is not a footnote — it's the headline of everything we do.</p>
+        </div>
+        <div class="value-item reveal">
+          <div class="value-number">02</div>
+          <div class="value-icon">◆</div>
+          <h3>Integrity</h3>
+          <p>We say what we mean and mean what we make. Every stitch, every design, every word reflects who we are.</p>
+        </div>
+        <div class="value-item reveal">
+          <div class="value-number">03</div>
+          <div class="value-icon">✦</div>
+          <h3>Excellence</h3>
+          <p>Premium is not just a price point. It's a standard. We refuse to be mediocre in our craft or our mission.</p>
+        </div>
+        <div class="value-item reveal">
+          <div class="value-number">04</div>
+          <div class="value-icon">⬡</div>
+          <h3>Community</h3>
+          <p>Fear1 is more than a brand — it's a movement. We're building a community of people who live with purpose.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-eyebrow">Community</div>
+        <h2 class="section-title">What They're Saying</h2>
+      </div>
+      <div class="testimonials-slider" id="testimonialSlider">
+        <div class="testimonial-track" id="testimonialTrack">
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>"Fear1 hits different. The quality is insane and the message is something I actually believe in. This isn't just a brand — it's a statement."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">JM</div>
+              <div><strong>Jordan M.</strong><span>London, UK</span></div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>"Wore my Fear1 hoodie to church and to the gym. Gets compliments everywhere. The fabric is premium and the fit is perfect."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">KA</div>
+              <div><strong>Kai A.</strong><span>Manchester, UK</span></div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>"Finally a faith-based brand that doesn't look like a church gift shop. Fear1 is fresh, bold, and the meaning goes deep."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">TN</div>
+              <div><strong>Temi N.</strong><span>Birmingham, UK</span></div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>"The Proverbs Crewneck is my favourite piece. People ask about it constantly and it opens conversations about faith. Love this brand."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">SR</div>
+              <div><strong>Samuel R.</strong><span>Bristol, UK</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slider-controls">
+        <button class="slider-btn" id="prevBtn">←</button>
+        <div class="slider-dots" id="sliderDots"></div>
+        <button class="slider-btn" id="nextBtn">→</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter" id="newsletter">
+    <div class="newsletter-bg"></div>
+    <div class="container">
+      <div class="newsletter-inner reveal">
+        <div class="section-eyebrow light">Stay Connected</div>
+        <h2 class="newsletter-title">Join the Fear1<br/>Community</h2>
+        <p>Be first for new drops, exclusive releases, and community updates.</p>
+        <form class="newsletter-form" id="newsletterForm">
+          <div class="newsletter-input-wrap">
+            <input type="email" placeholder="Your email address" required id="newsletterEmail" />
+            <button type="submit" class="btn-primary">Subscribe</button>
+          </div>
+          <p class="newsletter-disclaimer">No spam. Just the movement.</p>
+        </form>
+        <div class="newsletter-success" id="newsletterSuccess">
+          <span>✦</span> You're in. Welcome to the community.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <div class="section-eyebrow">Get in Touch</div>
+          <h2 class="section-title">Contact<br/><em>Fear1</em></h2>
+          <p>Have a question, collaboration idea, or just want to connect? We'd love to hear from you.</p>
+          <div class="contact-details">
+            <a href="mailto:hello@fear1.com" class="contact-link">
+              <span class="contact-icon">✉</span>
+              hello@fear1.com
+            </a>
+            <div class="contact-socials">
+              <a href="#" class="social-link" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </a>
+              <a href="#" class="social-link" aria-label="TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.73a8.23 8.23 0 004.83 1.54V6.82a4.85 4.85 0 01-1.06-.13z"/></svg>
+              </a>
+              <a href="#" class="social-link" aria-label="Twitter/X">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-wrap reveal">
+          <form class="contact-form" id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label>First Name</label>
+                <input type="text" placeholder="John" required />
+              </div>
+              <div class="form-group">
+                <label>Last Name</label>
+                <input type="text" placeholder="Doe" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" placeholder="john@example.com" required />
+            </div>
+            <div class="form-group">
+              <label>Subject</label>
+              <input type="text" placeholder="How can we help?" />
+            </div>
+            <div class="form-group">
+              <label>Message</label>
+              <textarea rows="5" placeholder="Tell us more..."></textarea>
+            </div>
+            <button type="submit" class="btn-primary full-width">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">FEAR<span>1</span></div>
+          <p>Fear One. Only fear God.<br/>Premium faith-inspired apparel.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" aria-label="TikTok">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.73a8.23 8.23 0 004.83 1.54V6.82a4.85 4.85 0 01-1.06-.13z"/></svg>
+            </a>
+            <a href="#" aria-label="X">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-links-col">
+          <h4>Shop</h4>
+          <a href="#collection">Hoodies</a>
+          <a href="#collection">T-Shirts</a>
+          <a href="#collection">Sweatshirts</a>
+          <a href="#collection">Caps</a>
+          <a href="#collection">Accessories</a>
+        </div>
+        <div class="footer-links-col">
+          <h4>Brand</h4>
+          <a href="#about">Our Story</a>
+          <a href="#values">Values</a>
+          <a href="#scripture">Scripture</a>
+          <a href="#testimonials">Community</a>
+        </div>
+        <div class="footer-links-col">
+          <h4>Help</h4>
+          <a href="#contact">Contact</a>
+          <a href="#">Shipping Info</a>
+          <a href="#">Returns</a>
+          <a href="#">Size Guide</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 Fear1. All rights reserved.</p>
+        <p class="footer-verse">"The fear of the Lord is the beginning of wisdom." — Proverbs 9:10</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
